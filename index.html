@@ -1,0 +1,313 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Let Me Study</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/vnd.microsoft.icon">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
+	<link rel="icon" href="img/fav.png" type="image/x-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/rain.css" rel="stylesheet">
+	<link href="css/snow.css" rel="stylesheet">
+	<script src="js/modernizr.js"></script>
+
+</head>
+<body id="fullscreen">
+	<div class="container-fluid">
+        <!-- box-header -->
+        <header class="box-header">
+            <a class="box-primary-nav-trigger" href="#0" id="trigger">
+                <div id="player-title"> <span class="box-menu-text">Player</span></div>
+				<span class="box-menu-icon"></span>
+            </a>
+			<div class="toggles">
+				<div class="rain-toggle toggle">Rain</div>
+				<div class="snow-toggle toggle" id="snow-toggle">Snow</div>
+				<div class="clear-toggle toggle" id="clear">Clear</div>
+				<div class="fs-toggle toggle" id="fs-doc-button"><img src="img/fs.png" id="fs" width="30px" height="30px"></div>
+				<div class="fs-exit-toggle toggle" id="fs-exit-doc-button">Exit</div>
+			</div>
+			<center>
+				<img src="img/micro.png" id="micro">
+			</center>
+        </header>
+        <!-- end box-header -->
+        <nav>
+            <ul class="box-primary-nav">
+				<div class="bg">
+					<center>
+					<div class="rain front-row"></div>
+					<div id="snow"></div>
+					<div class="music pulse2">♪♫•♫♪</div>
+					<div class="player">
+						Name: Yiruma - RiverFlows In You<br>
+						<audio id="audio" preload="auto" tabindex="0" controls="true" type="audio/mpeg" autoplay="true" volume="100%">
+						<source type="audio/mp3" src="https://ia800306.us.archive.org/14/items/Yiruma-RiverFlowsInYou/Yiruma-RiverFlowsInYou.mp3">
+						Sorry, your browser does not support HTML5 audio.
+						</audio>
+					</div>
+						<div class="footer"> 
+							Created By: Perves Mohammed
+						</div>
+					</center>
+				</div>
+            </ul>
+        </nav>
+    </div>
+		<!-- main container -->
+    <div class="main-container portfolio-inner clearfix">
+        <!-- songs div -->
+        <div class="portfolio-div" id="songs">
+            <div class="portfolio">
+                <!-- songs -->
+                <div class="categories-grid wow fadeInLeft">
+                    <nav class="categories text-center">
+                        <ul class="portfolio_filter">
+                            <li id="menu"><a href="" class="active" data-filter="*" Onclick="changeBgAll()">All</a></li>
+                            <li id="anime"><a href="" data-filter=".anime" Onclick="changeBgAnime()">Anime</a></li>
+                            <li id="menu"><a href="" data-filter=".classical" Onclick="changeBgClassical()">Classical</a></li>
+                            <li id="menu"><a href="" data-filter=".modern" Onclick="changeBgModern()">Modern</a></li>
+                            <li id="menu"><a href="" data-filter=".nature" Onclick="changeBgNature()">Nature</a></li>
+                            <li id="menu"><a href="" data-filter=".playlist" Onclick="changeBgPlaylists()">Playlists</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- songs_filter -->
+
+                <!-- songs_container -->
+                <div class="no-padding portfolio_container clearfix">
+                    <!-- single song-->
+                    <div class="col-md-4 col-sm-6  classical">
+							<span><a href="http://www.archive.org/download/bolero_69/Bolero.mp3" class="portfolio_item">
+                            <img src="img/classical.jpg" alt="Ravel Bolero" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Ravel Bolero</span>
+                                        <em>Classical</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a></span>
+                    </div>
+                    <!-- end single song-->
+
+                    <!-- single song-->
+                    <div class="col-md-4 col-sm-6 classical">
+							<span><a href="http://www.archive.org/download/MoonlightSonata_755/Beethoven-MoonlightSonata.mp3" class="portfolio_item">
+                            <img src="img/classical.jpg" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Moonlight Sonata - Beethoven</span>
+                                        <em>Classical</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a></span>
+                    </div>
+                    <!-- end single song-->
+
+                    <!-- single song-->
+                    <div class="col-md-4 col-sm-12 classical">
+                        <span><a href="http://www.archive.org/download/CanonInD_261/CanoninD.mp3" class="portfolio_item">
+                            <img src="img/classical.jpg" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Canon in D Pachabel</span>
+                                        <em>Classical</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a></span>
+                    </div>
+                    <!-- end single song-->
+					
+                    <!-- single song-->
+                    <div class="col-md-4 col-sm-6 modern">
+                        <span><a href="https://ia800306.us.archive.org/14/items/Yiruma-RiverFlowsInYou/Yiruma-RiverFlowsInYou.mp3" class="portfolio_item">
+                            <img src="http://www.laut.de/Yiruma/yiruma-161010.jpg" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Yiruma - River Flows in You</span>
+                                        <em>Modern</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a></span>
+                    </div>
+                    <!-- end single song-->
+					
+					 <!-- single song-->
+                    <div class="col-md-4 col-sm-12 modern">
+                        <span><a href="https://ia801701.us.archive.org/34/items/YirumaMaybe/Yiruma%20-%20Maybe.mp3" class="portfolio_item">
+                            <img src="http://www.laut.de/Yiruma/yiruma-161010.jpg" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Yiruma - Maybe</span>
+                                        <em>Modern</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a></span>
+                    </div>
+                    <!-- end single song-->
+					 <!-- single song-->
+                    <div class="col-md-4 col-sm-12 modern">
+                        <span><a href="https://ia800201.us.archive.org/11/items/KissTheRain-Yiruma/Yiruma-KissTheRain.mp3" class="portfolio_item">
+                            <img src="http://www.laut.de/Yiruma/yiruma-161010.jpg" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Yiruma - Kiss the Rain</span>
+                                        <em>Modern</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a></span>
+                    </div>
+                    <!-- end single song-->
+					<!-- single song-->
+                    <div class="col-md-4 col-sm-6  anime">
+							<span><a href="http://www.archive.org/download/bolero_69/Bolero.mp3" class="portfolio_item">
+                            <img src="img/anime0.jpg" alt="Ravel Bolero" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Ravel Bolero</span>
+                                        <em>Anime</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a></span>
+                    </div>
+                    <!-- end single song-->
+
+                    <!-- single song-->
+                    <div class="col-md-4 col-sm-6 anime">
+							<span><a href="http://www.archive.org/download/MoonlightSonata_755/Beethoven-MoonlightSonata.mp3" class="portfolio_item">
+                            <img src="img/anime0.jpg" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Moonlight Sonata - Beethoven</span>
+                                        <em>Anime</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a></span>
+                    </div>
+                    <!-- end single song-->
+
+                    <!-- single song-->
+                    <div class="col-md-4 col-sm-12 anime">
+                        <span><a href="http://www.archive.org/download/CanonInD_261/CanoninD.mp3" class="portfolio_item">
+                            <img src="img/anime0.jpg" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Canon in D Pachabel</span>
+                                        <em>Anime</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a></span>
+                    </div>
+                    <!-- end single song-->
+					<!-- single song-->
+                    <div class="col-md-4 col-sm-12 playlist">
+                        <span><a href="https://archive.org/download/Yiruma115SongGoldenCollection/Yiruma%20(---)%20-%20115%20Song%20Golden%20Collection.mp3" class="portfolio_item">
+                            <img src="http://www.laut.de/Yiruma/yiruma-161010.jpg" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Yiruma - Golden Collection</span>
+                                        <em>Modern</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a></span>
+                    </div>
+                    <!-- end single song-->
+					<!-- single song-->
+                    <div class="col-md-4 col-sm-12 playlist">
+                        <span><a href="https://ia802502.us.archive.org/19/items/LonelyRoadViolinCello/Lonely%20Road%20(Violin%20&%20Cello).MP3" class="portfolio_item">
+                            <img src="img/mozart.jpg" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Wind Of Buri - Lonely Road</span>
+                                        <em>Modern</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a></span>
+                    </div>
+                    <!-- end single song-->
+					<!-- single song-->
+                    <div class="col-md-4 col-sm-12 playlist">
+                        <span><a href="https://ia802502.us.archive.org/19/items/LonelyRoadViolinCello/Lonely%20Road%20(Violin%20&%20Cello).MP3" class="portfolio_item">
+                            <img src="img/mozart.jpg" alt="image" class="img-responsive" />
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>Wind Of Buri - Lonely Road</span>
+                                        <em>Modern</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a></span>
+                    </div>
+                    <!-- end single song-->
+            </div>
+            <!-- end songs_container -->
+        </div>
+        <!-- songs -->
+    </div>
+    <!-- end songs div -->	
+    </div>
+    <!-- end main container -->
+
+	<script src="js/player.js"></script>
+	<script src="js/rain.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery-2.1.1.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/custom.js"></script>
+	<script src="js/fs.js"></script>
+	<script src="js/top.js"></script>
+	<script src="js/bg.js"></script>
+	<script src="js/commands.js"></script>
+<script>
+$(document).ready(function(){
+    $("#snow-toggle").click(function(){
+		$("#snow").show();
+	});
+	
+    $("#clear").click(function(){
+        $("#snow").hide();
+    });
+	$("#fs-doc-button").click(function(){
+        $("#fs-exit-doc-button").show();
+    });
+	$("#fs-exit-doc-button").click(function(){
+        $("#fs-exit-doc-button").hide();
+		$('.fs-toggle.toggle').removeClass('active');
+    });
+	$("#trigger").click(function(){
+          $('#songs').toggle();
+    });
+});
+</script>
+
+</body>
+</html>
